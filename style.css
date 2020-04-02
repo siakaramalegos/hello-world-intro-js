@@ -1,4 +1,8 @@
 h1 {
-  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  /* font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; */
   color: rebeccapurple;
+}
+
+ol {
+  font-size: 32px;
 }
