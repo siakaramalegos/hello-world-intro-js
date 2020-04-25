@@ -1,10 +1,26 @@
-// const username = document.getElementById('username')
-// console.log(username)
-const greeting = "Hello"
-let myName = "Sia"
+const dogs = ['Harry', 'Priscilla']
+const dogs2 = ['Tom', 'Hanks']
 
-// console.log(greeting + ' ' + myName);
+function listDogs(dogsArray, customGreeting) {
+  let info = 'My doggos are called '
+  let greeting = customGreeting ? customGreeting : info
+  return greeting + dogsArray.join(', ') + '.'
+}
 
-myName = "George"
+console.log(listDogs(dogs))
+console.log(listDogs(dogs2, "My puppos are "))
 
-// console.log(greeting + ' ' + myName);
+// const dogsDetail = [
+//   ['Harry', 'Jack Russell terrier', 7],
+//   ['Priscilla', 'Australian Shepherd', 9],
+// ]
+
+// for (let index = 0; index < dogsDetail.length; index++) {
+//   const dog = dogsDetail[index]
+//   const text = `Name: ${dog[0]}, Breed: ${dog[1]}, Age: ${dog[2]}`
+//   console.log(text);
+// }
+
+// for (let i = 0; i <= 7; i++) {
+//   console.log(i)
+// }
