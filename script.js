@@ -1,26 +1,24 @@
-const dogs = ['Harry', 'Priscilla']
-const dogs2 = ['Tom', 'Hanks']
-
-function listDogs(dogsArray, customGreeting) {
-  let info = 'My doggos are called '
-  let greeting = customGreeting ? customGreeting : info
-  return greeting + dogsArray.join(', ') + '.'
+const myDog = {
+  name: "Tina Turner",
+  breed: "Afghan hound",
+  age: 7,
+  greeting: function() {
+    alert('woof')
+  },
+  toys: ['microphone', 'short dress'],
+  owner: {
+    firstName: 'Sia',
+    city: 'New Orleans'
+  }
 }
 
-console.log(listDogs(dogs))
-console.log(listDogs(dogs2, "My puppos are "))
+myDog.age = 8
+myDog.color = 'blond'
 
-// const dogsDetail = [
-//   ['Harry', 'Jack Russell terrier', 7],
-//   ['Priscilla', 'Australian Shepherd', 9],
-// ]
+const nameInput = document.querySelector('#name')
 
-// for (let index = 0; index < dogsDetail.length; index++) {
-//   const dog = dogsDetail[index]
-//   const text = `Name: ${dog[0]}, Breed: ${dog[1]}, Age: ${dog[2]}`
-//   console.log(text);
-// }
+function onNameChange(event) {
+  myDog.owner.firstName = event.target.value;
+}
 
-// for (let i = 0; i <= 7; i++) {
-//   console.log(i)
-// }
+nameInput.addEventListener('change', onNameChange)
